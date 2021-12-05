@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<!--
+Create a Web app that allows the user to see historical information on the NBA teams.
+Add the following three links to the site:
+1. Display all the information on all of the teams                          sql done
+2. Displays the top five oldest teams                                       sql done
+3. Display the top five most recently founded teams                         
+4. Which team won the championship the most                                 sql done
+5. Which team(s) won the NBA championship in 1970, 1980, and 1990.          Fulltext
+
+You are given a CSV file with team name,year when it was founded, number of titles, year won the
+title. Either work with the csv file or import it into a MySQL database.
+
+-->
+
+<html>   
+    <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+<script type="text/javascript">
+            
+            function rbPopulate(){
+                
+                var radioInput = $("[name='nbaRB']:checked").val();              
+               
+               var search = $("[name='searchtxt']").val();
+               $("#showall").hide();
+        
+                $.ajax({
+                        url:        "nbainfo.jsp",
+                        data:       {rbKey: radioInput},
+                        success:    function(serverdata){
+                            $("#showtable").show();
+                            $("#showtable").html(serverdata);
+                            
+                        }
+                    });
+
+        }//radio button data function
+        
+            function rbClear(){
+                //$('input[name=nbaRB]').attr('checked',false);
+                document.getElementById("nbaRB").checked = false;
+                document.getElementById("nbaRB1").checked = false;
+                document.getElementById("nbaRB2").checked = false;
+                document.getElementById("nbaRB3").checked = false;
+                document.getElementById("nbaRB4").checked = false;
+            }//clear radiobuttons
+            function rbPopClear(){
+                rbPopulate();
+                rbClear();
+            } //clear radiobuttons on select to allow switching between inputs freely
+    
+            function showNBALogo(){
+            //show logo
+                    var photologo = "NBA-Logo.png";
+                    $("#showlogo").show("fast",function()
+                {
+                    $("#showlogo").attr("src", photologo);
+                    
+                });
+            }//show logo on load
+           function showCustomSearch(){
+               
+              var search = $("[name='searchtxt']").val();
+        
+                if (search === '') {
+                    $("#showall").hide();
+                }
+                else{
+               $("#showtable").hide();
+               
+               $.ajax({
+                        url:        "nbacustomsearch.jsp",
+                        data:       {searchKey: search},
+                        success:    function(serverdata){
+                            $("#showall").show();
+                            $("#teamselect").html(serverdata);
+                            
+                        } //end serverdata
+                    }); //end ajax
+                }   
+           } //end customsearch
+
+       function teaminfo(){
+           
+           var selectedValue = $("#teamList").val();
+
+            //separate string by value
+        var valueArray = selectedValue.split("/");
+        var yearfounded = valueArray[0];
+        var nbawins = valueArray[1];
+        var yearofwins = valueArray[2];
+        var teamTxt = $("#teamList option:selected").text();
+        
+       var websitelogo = teamLogoWebsite(teamTxt);
+       var weblogoArray = websitelogo.split(",");
+       var website = weblogoArray[0];
+       var logo = weblogoArray[1];
+       
+        //display
+        $("#teaminfo").html("Team: " + teamTxt + "</br>"
+                + "Year Founded: " + yearfounded + "</br>" 
+                + "Number of Championship Wins: "+ nbawins + "</br>"
+                + "Year of win(s): "+yearofwins+"</br>"
+        
+                +"More Stats: <a href='" + website+"'>"+teamTxt+"</a>"+"</br>");//end info display
+        
+        $("#teamlogo").show("fast",function()
+                {
+                    $("#teamlogo").attr("src", logo);
+                    
+                });//end logo
+       }//end teaminfo
+       
+       function teamLogoWebsite(team){
+           //function to attach website and team logo info
+        var weblogo = "";
+
+         if (team === "ATLANTA HAWKS"){
+            weblogo = "https://www.landofbasketball.com/teams/atlanta_hawks.htm" + "," + "hawks.png";
+          }
+         else if (team === "BOSTON CELTICS"){
+              weblogo = "https://www.landofbasketball.com/teams/boston_celtics.htm" + "," + "celtics.png";
+          }
+         else if (team === "CHARLOTTE BOBCATS"){
+              weblogo = "https://www.landofbasketball.com/teams/charlotte_hornets.htm" + "," + "hornets.png";
+          }
+         else if (team === "CHICAGO BULLS"){
+              weblogo = "https://www.landofbasketball.com/teams/chicago_bulls.htm" + "," + "bulls.png";
+          }
+         else if (team === "CLEVELAND CAVALIERS"){
+              weblogo = "https://www.landofbasketball.com/teams/cleveland_cavaliers.htm" + "," + "cavs.png";
+          }
+         else if (team === "DALLAS MAVERICKS"){
+              weblogo = "https://www.landofbasketball.com/teams/dallas_mavericks.htm" + "," + "mavericks.png";
+          }
+         else if (team === "DENVER NUGGETS"){
+              weblogo =  "https://www.landofbasketball.com/teams/denver_nuggets.htm" + "," + "nuggets.png";
+          }
+         else if (team === "DETROIT PISTONS"){
+              weblogo = "https://www.landofbasketball.com/teams/detroit_pistons.htm" + "," + "pistons.png";
+          }
+         else if (team === "GOLDEN STATE WARRIORS"){
+              weblogo = "https://www.landofbasketball.com/teams/golden_state_warriors.htm" + "," + "warriors.png";
+          }
+         else if (team === "HOUSTON ROCKETS"){
+              weblogo = "https://www.landofbasketball.com/teams/houston_rockets.htm" + "," + "rockets.png";
+          }
+            else if (team === "INDIANA PACERS"){
+              weblogo = "https://www.landofbasketball.com/teams/indiana_pacers.htm" + "," + "pacers.png";
+          }
+            else if (team === "LOS ANGELES CLIPPERS"){
+              weblogo = "https://www.landofbasketball.com/teams/los_angeles_clippers.htm" + "," + "clippers.png";
+          }
+            else if (team === "LOS ANGELES LAKERS"){
+              weblogo =   "https://www.landofbasketball.com/teams/los_angeles_lakers.htm" + "," + "lakers.png";
+          }
+            else if (team === "MEMPHIS GRIZZLIES"){
+              weblogo = "https://www.landofbasketball.com/teams/memphis_grizzlies.htm" + "," + "grizzlies.png";
+          }
+            else if (team === "MIAMI HEAT"){
+              weblogo = "https://www.landofbasketball.com/teams/miami_heat.htm"+ "," + "heat.png";
+          }
+            else if (team === "MILWAUKEE BUCKS"){
+              weblogo = "https://www.landofbasketball.com/teams/milwaukee_bucks.htm" + "," + "bucks.png";
+          }
+            else if (team === "MINNESOTA TIMBERWOLVES"){
+              weblogo = "https://www.landofbasketball.com/teams/minnesota_timberwolves.htm" + "," + "timberwolves.png";
+          }
+            else if (team === "NEW JERSEY NETS"){
+              weblogo = "https://www.landofbasketball.com/teams/brooklyn_nets.htm" + "," + "nets.png";
+          }
+            else if (team === "NEW ORLEANS/OKLAHOMA CITY HORNETS"){
+              weblogo = "https://www.landofbasketball.com/teams/new_orleans_pelicans.htm" + "," + "pelicans.png";
+          }
+            else if (team === "NEW YORK KNICKERBOCKERS"){
+              weblogo = "https://www.landofbasketball.com/teams/new_york_knicks.htm" + "," + "knicks.png";
+          }
+            else if (team === "ORLANDO MAGIC"){
+              weblogo = "https://www.landofbasketball.com/teams/orlando_magic.htm" + "," + "magic.png";
+          }
+            else if (team === "PHILADELPHIA 76ERS"){
+              weblogo = "https://www.landofbasketball.com/teams/philadelphia_76ers.htm" + "," + "76ers.png";
+          }
+            else if (team === "PHOENIX SUNS"){
+              weblogo = "https://www.landofbasketball.com/teams/phoenix_suns.htm"+ "," + "suns.png";
+          }
+            else if (team === "PORTLAND TRAILBLAZERS"){
+              weblogo = "https://www.landofbasketball.com/teams/portland_trailblazers.htm" + "," + "trailblazers.png";
+          }
+            else if (team === "SACRAMENTO KINGS"){
+              weblogo = "https://www.landofbasketball.com/teams/sacramento_kings.htm" + "," + "kings.png";
+          }
+          else if (team === "SAN ANTONIO SPURS"){
+              weblogo ="https://www.landofbasketball.com/teams/san_antonio_spurs.htm"+ "," + "spurs.png";
+          }
+          else if (team === "SEATTLE SUPERSONICS"){
+              weblogo ="https://www.landofbasketball.com/teams_by_year/1968_1969_supersonics.htm"+ "," + "sonics.png";
+          }
+          else if (team === "SYRACUSE NATIONALS"){
+              weblogo ="https://www.landofbasketball.com/teams_by_year/1957_1958_nationals.htm"+ "," + "nationals.png";
+          }
+          else if (team === "TORONTO RAPTORS"){
+              weblogo ="https://www.landofbasketball.com/teams/toronto_raptors.htm"+ "," + "raptors.png";
+          }
+          else if (team === "UTAH JAZZ"){
+              weblogo ="https://www.landofbasketball.com/teams/utah_jazz.htm"+ "," + "jazz.png";
+          }
+          else if (team === "WASHINGTON WIZARDS"){
+              weblogo ="https://www.landofbasketball.com/teams/washington_wizards.htm"+ "," + "wizards.png";
+          }
+          return weblogo;
+ }//end team logo website func
+            
+ function callfuncs(){
+     showNBALogo();
+     
+    }//functions to call onload
+</script>
+    </head>
+    <body onload="callfuncs()">
+        <img id="showlogo" width="300" height="200" style="display:none"/>
+        <h2>NBA Team Historical Information</h2>
+        Choose General Data: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Custom Search: 
+        <input type="text" name="searchtxt" size="40" onkeyup="showCustomSearch()"/><br/>
+        <input type="radio" id="nbaRB" name="nbaRB" value="(i)" onclick="rbPopClear()"/>All Information<br/>
+        <input type="radio" id="nbaRB1" name="nbaRB" value="(ii)" onclick="rbPopClear()"/>Top 5 Oldest Teams<br/>
+        <input type="radio" id="nbaRB2" name="nbaRB" value="(iii)" onclick="rbPopClear()"/>Top 5 Most Recently Founded Teams<br/>
+        <input type="radio" id="nbaRB3" name="nbaRB" value="(iv)" onclick="rbPopClear()"/>Team with the Most Championships<br/>
+        <input type="radio" id="nbaRB4" name="nbaRB" value="(v)" onclick="rbPopClear()"/>Teams that won the NBA Championship in 1970, 1980, and 1990<br/>
+        <p></p>
+        <div id="showall" style="width:900px;border:1px solid black; overflow:hidden;display:none">
+           <div id="teamselect" style="float:left;width:350px;border:1px solid gray;"></div>
+           <div id="teaminfo" style="margin-left:350px;border:none;overflow:scroll"></div>
+           <img id="teamlogo" width="250" height="200"/>       
+           </div>
+        <p></p>
+        <div id="showtable"></div>
+        <p></p>
+        
+   </body>
+</html>
