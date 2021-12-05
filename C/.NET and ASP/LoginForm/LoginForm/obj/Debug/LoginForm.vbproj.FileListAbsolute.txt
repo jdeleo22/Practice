@@ -1,0 +1,15 @@
+C:\Users\johnd\source\repos\LoginForm\LoginForm\bin\Debug\LoginForm.exe.config
+C:\Users\johnd\source\repos\LoginForm\LoginForm\bin\Debug\LoginForm.exe
+C:\Users\johnd\source\repos\LoginForm\LoginForm\bin\Debug\LoginForm.pdb
+C:\Users\johnd\source\repos\LoginForm\LoginForm\bin\Debug\LoginForm.xml
+C:\Users\johnd\source\repos\LoginForm\LoginForm\obj\Debug\LoginForm.vbprojAssemblyReference.cache
+C:\Users\johnd\source\repos\LoginForm\LoginForm\obj\Debug\LoginForm.CreateAccountForm.resources
+C:\Users\johnd\source\repos\LoginForm\LoginForm\obj\Debug\LoginForm.Form1.resources
+C:\Users\johnd\source\repos\LoginForm\LoginForm\obj\Debug\LoginForm.Resources.resources
+C:\Users\johnd\source\repos\LoginForm\LoginForm\obj\Debug\LoginForm.vbproj.GenerateResource.cache
+C:\Users\johnd\source\repos\LoginForm\LoginForm\obj\Debug\LoginForm.vbproj.CoreCompileInputs.cache
+C:\Users\johnd\source\repos\LoginForm\LoginForm\obj\Debug\LoginForm.exe
+C:\Users\johnd\source\repos\LoginForm\LoginForm\obj\Debug\LoginForm.xml
+C:\Users\johnd\source\repos\LoginForm\LoginForm\obj\Debug\LoginForm.pdb
+C:\Users\johnd\source\repos\LoginForm\LoginForm\obj\Debug\LoginForm.LoginForm.resources
+C:\Users\johnd\source\repos\LoginForm\LoginForm\obj\Debug\LoginForm.RecoveryForm.resources
