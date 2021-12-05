@@ -1,0 +1,10 @@
+C:\Users\johnd\source\repos\Assignment1 CRUD Screen\Assignment1 CRUD Screen\bin\Debug\Assignment1 CRUD Screen.exe.config
+C:\Users\johnd\source\repos\Assignment1 CRUD Screen\Assignment1 CRUD Screen\bin\Debug\Assignment1 CRUD Screen.exe
+C:\Users\johnd\source\repos\Assignment1 CRUD Screen\Assignment1 CRUD Screen\bin\Debug\Assignment1 CRUD Screen.pdb
+C:\Users\johnd\source\repos\Assignment1 CRUD Screen\Assignment1 CRUD Screen\obj\Debug\Assignment1 CRUD Screen.csprojAssemblyReference.cache
+C:\Users\johnd\source\repos\Assignment1 CRUD Screen\Assignment1 CRUD Screen\obj\Debug\Assignment1_CRUD_Screen.Form1.resources
+C:\Users\johnd\source\repos\Assignment1 CRUD Screen\Assignment1 CRUD Screen\obj\Debug\Assignment1_CRUD_Screen.Properties.Resources.resources
+C:\Users\johnd\source\repos\Assignment1 CRUD Screen\Assignment1 CRUD Screen\obj\Debug\Assignment1 CRUD Screen.csproj.GenerateResource.cache
+C:\Users\johnd\source\repos\Assignment1 CRUD Screen\Assignment1 CRUD Screen\obj\Debug\Assignment1 CRUD Screen.csproj.CoreCompileInputs.cache
+C:\Users\johnd\source\repos\Assignment1 CRUD Screen\Assignment1 CRUD Screen\obj\Debug\Assignment1 CRUD Screen.exe
+C:\Users\johnd\source\repos\Assignment1 CRUD Screen\Assignment1 CRUD Screen\obj\Debug\Assignment1 CRUD Screen.pdb
