@@ -1,0 +1,32 @@
+C:\Users\johnd\Source\Repos\theoffice\MainUI\obj\Debug\MainUI.csprojAssemblyReference.cache
+C:\Users\johnd\source\repos\theoffice\MainUI\bin\Debug\MainUI.exe.config
+C:\Users\johnd\source\repos\theoffice\MainUI\bin\Debug\MainUI.exe
+C:\Users\johnd\source\repos\theoffice\MainUI\bin\Debug\MainUI.pdb
+C:\Users\johnd\source\repos\theoffice\MainUI\obj\Debug\MainUI.AccountInformation.resources
+C:\Users\johnd\source\repos\theoffice\MainUI\obj\Debug\MainUI.CreateAccount.resources
+C:\Users\johnd\source\repos\theoffice\MainUI\obj\Debug\MainUI.NewAccount.resources
+C:\Users\johnd\source\repos\theoffice\MainUI\obj\Debug\MainUI.UpdateAccountForm.resources
+C:\Users\johnd\source\repos\theoffice\MainUI\obj\Debug\MainUI.Welcome.resources
+C:\Users\johnd\source\repos\theoffice\MainUI\obj\Debug\MainUI.Products.resources
+C:\Users\johnd\source\repos\theoffice\MainUI\obj\Debug\MainUI.Details.resources
+C:\Users\johnd\source\repos\theoffice\MainUI\obj\Debug\MainUI.Properties.Resources.resources
+C:\Users\johnd\source\repos\theoffice\MainUI\obj\Debug\MainUI.csproj.GenerateResource.cache
+C:\Users\johnd\source\repos\theoffice\MainUI\obj\Debug\MainUI.csproj.CoreCompileInputs.cache
+C:\Users\johnd\source\repos\theoffice\MainUI\obj\Debug\MainUI.exe
+C:\Users\johnd\source\repos\theoffice\MainUI\obj\Debug\MainUI.pdb
+M:\Documents\.Net framework\projs\New folder\ASP Group Project-Office Supplies\theoffice\MainUI\bin\Debug\MainUI.exe.config
+M:\Documents\.Net framework\projs\New folder\ASP Group Project-Office Supplies\theoffice\MainUI\bin\Debug\MainUI.exe
+M:\Documents\.Net framework\projs\New folder\ASP Group Project-Office Supplies\theoffice\MainUI\bin\Debug\MainUI.pdb
+M:\Documents\.Net framework\projs\New folder\ASP Group Project-Office Supplies\theoffice\MainUI\obj\Debug\MainUI.csprojAssemblyReference.cache
+M:\Documents\.Net framework\projs\New folder\ASP Group Project-Office Supplies\theoffice\MainUI\obj\Debug\MainUI.AccountInformation.resources
+M:\Documents\.Net framework\projs\New folder\ASP Group Project-Office Supplies\theoffice\MainUI\obj\Debug\MainUI.CreateAccount.resources
+M:\Documents\.Net framework\projs\New folder\ASP Group Project-Office Supplies\theoffice\MainUI\obj\Debug\MainUI.NewAccount.resources
+M:\Documents\.Net framework\projs\New folder\ASP Group Project-Office Supplies\theoffice\MainUI\obj\Debug\MainUI.UpdateAccountForm.resources
+M:\Documents\.Net framework\projs\New folder\ASP Group Project-Office Supplies\theoffice\MainUI\obj\Debug\MainUI.Welcome.resources
+M:\Documents\.Net framework\projs\New folder\ASP Group Project-Office Supplies\theoffice\MainUI\obj\Debug\MainUI.Products.resources
+M:\Documents\.Net framework\projs\New folder\ASP Group Project-Office Supplies\theoffice\MainUI\obj\Debug\MainUI.Details.resources
+M:\Documents\.Net framework\projs\New folder\ASP Group Project-Office Supplies\theoffice\MainUI\obj\Debug\MainUI.Properties.Resources.resources
+M:\Documents\.Net framework\projs\New folder\ASP Group Project-Office Supplies\theoffice\MainUI\obj\Debug\MainUI.csproj.GenerateResource.cache
+M:\Documents\.Net framework\projs\New folder\ASP Group Project-Office Supplies\theoffice\MainUI\obj\Debug\MainUI.csproj.CoreCompileInputs.cache
+M:\Documents\.Net framework\projs\New folder\ASP Group Project-Office Supplies\theoffice\MainUI\obj\Debug\MainUI.exe
+M:\Documents\.Net framework\projs\New folder\ASP Group Project-Office Supplies\theoffice\MainUI\obj\Debug\MainUI.pdb
