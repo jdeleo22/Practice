@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+nav {
+  border-bottom: "solid 4px";
+  padding-bottom: "1rem";
+  /* display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background-color: rgb(93, 132, 145);
+  color: white; */
+}
+
+main {
+  padding: "1rem 0"
+}
